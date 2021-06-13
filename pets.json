@@ -1,0 +1,52 @@
+[
+    {
+        "id": 1,
+        "name": "toto",
+        "age": 5,
+        "weight": "15kg",
+        "breed": "chuahua",
+        "type": "dog",
+        "owner_id": 1,
+        "photo": ""
+    },
+    {
+        "id": 2,
+        "name": "toto2",
+        "age": 5,
+        "weight": "15kg",
+        "breed": "chuahua",
+        "type": "dog",
+        "owner_id": 1,
+        "photo": ""
+    },
+    {
+        "id": 3,
+        "name": "toto23",
+        "age": 5,
+        "weight": "15kg",
+        "breed": "chuahua",
+        "type": "dog",
+        "owner_id": 1,
+        "photo": ""
+    },
+    {
+        "id": 4,
+        "name": "toto24",
+        "age": 5,
+        "weight": "15kg",
+        "breed": "chuahua",
+        "type": "dog",
+        "owner_id": 1,
+        "photo": ""
+    },
+    {
+        "id": 5,
+        "name": "toto25",
+        "age": 5,
+        "weight": "15kg",
+        "breed": "chuahua",
+        "type": "dog",
+        "owner_id": 1,
+        "photo": ""
+    }
+]
