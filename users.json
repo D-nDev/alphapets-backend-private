@@ -1,12 +1,1 @@
-[
-    {
-        "id": 1,
-        "name": "Diego",
-        "email": "diego-s.novaes@hotmail.com",
-        "telnumber": 11970151606,
-        "pass": "$2b$10$4.s3bkfkZDcgkd3YaoblBufdA3DRnqiMVRdpyxhiX/avi6X3J1Ram",
-        "passwordResetToken": "",
-        "passwordResetExpires_fulldate": "",
-        "userphoto": ""
-    }
-]
+[{"id":1,"name":"Diego Novaes de Sousa","email":"diego-s.novaes@hotmail.com","telnumber":11970151606,"pass":"$2b$10$AX3pAV4wfyB4ewqeAADALOlNiBPs6QJgQj3JkzFMkEozOCk81Zs1W","passwordResetToken":"","passwordResetExpires_fulldate":"","userphoto":"http://res.cloudinary.com/alphapets/image/upload/v1623867793/dbxr9qoy10xcomboibh9.jpg"}]

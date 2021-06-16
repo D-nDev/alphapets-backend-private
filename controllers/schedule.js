@@ -9,10 +9,15 @@ function schedule(id, description, owner_email, pet_id, pet_name, date) {
 
             const schedule = JSON.parse(data);
 
-            id = schedule[schedule.length - 1].id + 1;
+            if (schedule.length > 0) {
+                id = schedule[schedule.length - 1].id + 1;
+            }
 
             schedule.forEach((schedule) => {
-                if (schedule.owner_email == owner_email && schedule.pet_id == pet_id) {
+                if (
+                    schedule.owner_email == owner_email &&
+                    schedule.pet_id == pet_id
+                ) {
                     if (date == schedule.date) {
                         samedate_count += 1; // if the user already has a schedule for the pet in the same day, deny
                     }
