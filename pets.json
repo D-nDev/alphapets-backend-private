@@ -2,51 +2,21 @@
     {
         "id": 1,
         "name": "toto",
-        "age": 5,
+        "age": "5",
         "weight": "15kg",
         "breed": "chuahua",
         "type": "dog",
-        "owner_id": 1,
-        "photo": ""
+        "owner_email": "diego-s.novaes@hotmail.com",
+        "photo": "http://res.cloudinary.com/alphapets/image/upload/v1623806969/ixhszodyilt4bxajwwum.png"
     },
     {
         "id": 2,
         "name": "toto2",
-        "age": 5,
-        "weight": "15kg",
-        "breed": "chuahua",
+        "age": "15",
+        "weight": "14",
+        "breed": "sla",
         "type": "dog",
-        "owner_id": 1,
-        "photo": ""
-    },
-    {
-        "id": 3,
-        "name": "toto23",
-        "age": 5,
-        "weight": "15kg",
-        "breed": "chuahua",
-        "type": "dog",
-        "owner_id": 1,
-        "photo": ""
-    },
-    {
-        "id": 4,
-        "name": "toto24",
-        "age": 5,
-        "weight": "15kg",
-        "breed": "chuahua",
-        "type": "dog",
-        "owner_id": 1,
-        "photo": ""
-    },
-    {
-        "id": 5,
-        "name": "toto25",
-        "age": 5,
-        "weight": "15kg",
-        "breed": "chuahua",
-        "type": "dog",
-        "owner_id": 1,
-        "photo": ""
+        "owner_email": "diego-s.novaes@hotmail.com",
+        "photo": "http://res.cloudinary.com/alphapets/image/upload/v1623806969/ixhszodyilt4bxajwwum.png"
     }
 ]

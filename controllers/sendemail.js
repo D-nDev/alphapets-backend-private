@@ -43,7 +43,7 @@ function sendEmail(email, token, browser, os, os_version, ip) {
                 if (err) {
                     reject(err);
                 } else {
-                    resolve(true); // send back to the app.js, in order to send something to the front-end or whatever else
+                    resolve('Ok'); // send back to the app.js, in order to send something to the front-end or whatever else
                 }
             });
         });

@@ -17,7 +17,7 @@ function resetTemplate(
         <title></title>
         <style type="text/css" rel="stylesheet" media="all">
         /* Base ------------------------------ */
-        
+
         @import url("https://fonts.googleapis.com/css?family=Nunito+Sans:400,700&display=swap");
         body {
           width: 100% !important;
@@ -25,19 +25,19 @@ function resetTemplate(
           margin: 0;
           -webkit-text-size-adjust: none;
         }
-        
+
         a {
           color: #3869D4;
         }
-        
+
         a img {
           border: none;
         }
-        
+
         td {
           word-break: break-word;
         }
-        
+
         .preheader {
           display: none !important;
           visibility: hidden;
@@ -50,13 +50,13 @@ function resetTemplate(
           overflow: hidden;
         }
         /* Type ------------------------------ */
-        
+
         body,
         td,
         th {
           font-family: "Nunito Sans", Helvetica, Arial, sans-serif;
         }
-        
+
         h1 {
           margin-top: 0;
           color: #333333;
@@ -64,7 +64,7 @@ function resetTemplate(
           font-weight: bold;
           text-align: left;
         }
-        
+
         h2 {
           margin-top: 0;
           color: #333333;
@@ -72,7 +72,7 @@ function resetTemplate(
           font-weight: bold;
           text-align: left;
         }
-        
+
         h3 {
           margin-top: 0;
           color: #333333;
@@ -80,12 +80,12 @@ function resetTemplate(
           font-weight: bold;
           text-align: left;
         }
-        
+
         td,
         th {
           font-size: 16px;
         }
-        
+
         p,
         ul,
         ol,
@@ -94,25 +94,25 @@ function resetTemplate(
           font-size: 16px;
           line-height: 1.625;
         }
-        
+
         p.sub {
           font-size: 13px;
         }
         /* Utilities ------------------------------ */
-        
+
         .align-right {
           text-align: right;
         }
-        
+
         .align-left {
           text-align: left;
         }
-        
+
         .align-center {
           text-align: center;
         }
         /* Buttons ------------------------------ */
-        
+
         .button {
           background-color: #3869D4;
           border-top: 10px solid #3869D4;
@@ -127,7 +127,7 @@ function resetTemplate(
           -webkit-text-size-adjust: none;
           box-sizing: border-box;
         }
-        
+
         .button--green {
           background-color: #22BC66;
           border-top: 10px solid #22BC66;
@@ -135,7 +135,7 @@ function resetTemplate(
           border-bottom: 10px solid #22BC66;
           border-left: 18px solid #22BC66;
         }
-        
+
         .button--red {
           background-color: #FF6136;
           border-top: 10px solid #FF6136;
@@ -143,7 +143,7 @@ function resetTemplate(
           border-bottom: 10px solid #FF6136;
           border-left: 18px solid #FF6136;
         }
-        
+
         @media only screen and (max-width: 500px) {
           .button {
             width: 100% !important;
@@ -151,21 +151,21 @@ function resetTemplate(
           }
         }
         /* Attribute list ------------------------------ */
-        
+
         .attributes {
           margin: 0 0 21px;
         }
-        
+
         .attributes_content {
           background-color: #F4F4F7;
           padding: 16px;
         }
-        
+
         .attributes_item {
           padding: 0;
         }
         /* Related Items ------------------------------ */
-        
+
         .related {
           width: 100%;
           margin: 0;
@@ -174,31 +174,31 @@ function resetTemplate(
           -premailer-cellpadding: 0;
           -premailer-cellspacing: 0;
         }
-        
+
         .related_item {
           padding: 10px 0;
           color: #CBCCCF;
           font-size: 15px;
           line-height: 18px;
         }
-        
+
         .related_item-title {
           display: block;
           margin: .5em 0 0;
         }
-        
+
         .related_item-thumb {
           display: block;
           padding-bottom: 10px;
         }
-        
+
         .related_heading {
           border-top: 1px solid #CBCCCF;
           text-align: center;
           padding: 25px 0 10px;
         }
         /* Discount Code ------------------------------ */
-        
+
         .discount {
           width: 100%;
           margin: 0;
@@ -209,33 +209,33 @@ function resetTemplate(
           background-color: #F4F4F7;
           border: 2px dashed #CBCCCF;
         }
-        
+
         .discount_heading {
           text-align: center;
         }
-        
+
         .discount_body {
           text-align: center;
           font-size: 15px;
         }
         /* Social Icons ------------------------------ */
-        
+
         .social {
           width: auto;
         }
-        
+
         .social td {
           padding: 0;
           width: auto;
         }
-        
+
         .social_icon {
           height: 20px;
           margin: 0 8px 10px 8px;
           padding: 0;
         }
         /* Data table ------------------------------ */
-        
+
         .purchase {
           width: 100%;
           margin: 0;
@@ -244,7 +244,7 @@ function resetTemplate(
           -premailer-cellpadding: 0;
           -premailer-cellspacing: 0;
         }
-        
+
         .purchase_content {
           width: 100%;
           margin: 0;
@@ -253,54 +253,54 @@ function resetTemplate(
           -premailer-cellpadding: 0;
           -premailer-cellspacing: 0;
         }
-        
+
         .purchase_item {
           padding: 10px 0;
           color: #51545E;
           font-size: 15px;
           line-height: 18px;
         }
-        
+
         .purchase_heading {
           padding-bottom: 8px;
           border-bottom: 1px solid #EAEAEC;
         }
-        
+
         .purchase_heading p {
           margin: 0;
           color: #85878E;
           font-size: 12px;
         }
-        
+
         .purchase_footer {
           padding-top: 15px;
           border-top: 1px solid #EAEAEC;
         }
-        
+
         .purchase_total {
           margin: 0;
           text-align: right;
           font-weight: bold;
           color: #333333;
         }
-        
+
         .purchase_total--label {
           padding: 0 15px 0 0;
         }
-        
+
         body {
           background-color: #F4F4F7;
           color: #51545E;
         }
-        
+
         p {
           color: #51545E;
         }
-        
+
         p.sub {
           color: #6B6E76;
         }
-        
+
         .email-wrapper {
           width: 100%;
           margin: 0;
@@ -310,7 +310,7 @@ function resetTemplate(
           -premailer-cellspacing: 0;
           background-color: #F4F4F7;
         }
-        
+
         .email-content {
           width: 100%;
           margin: 0;
@@ -320,16 +320,16 @@ function resetTemplate(
           -premailer-cellspacing: 0;
         }
         /* Masthead ----------------------- */
-        
+
         .email-masthead {
           padding: 25px 0;
           text-align: center;
         }
-        
+
         .email-masthead_logo {
           width: 94px;
         }
-        
+
         .email-masthead_name {
           font-size: 16px;
           font-weight: bold;
@@ -338,7 +338,7 @@ function resetTemplate(
           text-shadow: 0 1px 0 white;
         }
         /* Body ------------------------------ */
-        
+
         .email-body {
           width: 100%;
           margin: 0;
@@ -348,7 +348,7 @@ function resetTemplate(
           -premailer-cellspacing: 0;
           background-color: #FFFFFF;
         }
-        
+
         .email-body_inner {
           width: 570px;
           margin: 0 auto;
@@ -358,7 +358,7 @@ function resetTemplate(
           -premailer-cellspacing: 0;
           background-color: #FFFFFF;
         }
-        
+
         .email-footer {
           width: 570px;
           margin: 0 auto;
@@ -368,11 +368,11 @@ function resetTemplate(
           -premailer-cellspacing: 0;
           text-align: center;
         }
-        
+
         .email-footer p {
           color: #6B6E76;
         }
-        
+
         .body-action {
           width: 100%;
           margin: 30px auto;
@@ -382,25 +382,25 @@ function resetTemplate(
           -premailer-cellspacing: 0;
           text-align: center;
         }
-        
+
         .body-sub {
           margin-top: 25px;
           padding-top: 25px;
           border-top: 1px solid #EAEAEC;
         }
-        
+
         .content-cell {
           padding: 35px;
         }
         /*Media Queries ------------------------------ */
-        
+
         @media only screen and (max-width: 600px) {
           .email-body_inner,
           .email-footer {
             width: 100% !important;
           }
         }
-        
+
         @media (prefers-color-scheme: dark) {
           body,
           .email-body,
@@ -431,7 +431,7 @@ function resetTemplate(
             text-shadow: none !important;
           }
         }
-        
+
         :root {
           color-scheme: light dark;
           supported-color-schemes: light dark;
@@ -446,7 +446,7 @@ function resetTemplate(
       <![endif]-->
       </head>
       <body>
-        <span class="preheader">Use this code to reset your password. The code is only valid for only 2 hours.</span>
+        <span class="preheader">Use this code to reset your password. The code is only valid for only 4 hours.</span>
         <table class="email-wrapper" width="100%" cellpadding="0" cellspacing="0" role="presentation">
           <tr>
             <td align="center">
@@ -466,8 +466,8 @@ function resetTemplate(
                       <tr>
                         <td class="content-cell">
                           <div class="f-fallback">
-                            <h1>Hi ${user_name},</h1>
-                            <p>You recently requested to reset your password for your AlphaPets account. Use the code below to reset it at <a href="#">Reset Pass</a>. <strong>This code is only valid for the next 2 hours.</strong></p>
+                            <h1>Olá, ${user_name}</h1>
+                            <p>Você solicitou recentemente o reset de sua senha do AlphaPets. Use o código abaixo em <a href="#">Resetar Senha</a>. <strong>Este código é valido pelas próximas 4 horas.</strong></p>
                             <!-- Action -->
                             <table class="body-action" align="center" width="100%" cellpadding="0" cellspacing="0" role="presentation">
                               <tr>
@@ -484,12 +484,11 @@ function resetTemplate(
                                 </td>
                               </tr>
                             </table>
-                            <p>WebBrowser: <b>${web_browser}</b></p>
-                            <p>OS: <b>${os_system} ${os_version}</b></p>
-                            <p>IP Address: <b>${ip}</b></p>
-                            <p>If you did not request a password reset, please ignore this email or <a href="mailto:alphapetshelp@gmail.com">contact support</a> if you have questions.</p>
-                            <p>Thanks,
-                              <br>The AlphaPets Team</p>
+                            <p>Navegador: <b>${web_browser}</b></p>
+                            <p>Sistema Operacional: <b>${os_system} ${os_version}</b></p>
+                            <p>IP Requisitante: <b>${ip}</b></p>
+                            <p>Se você não fez essa solicitação, ignore-a, ou entre em contato com o suporte: <a href="mailto:alphapetshelp@gmail.com">Contactar suporte</a> se você tiver dúvidas ou precisar de ajuda com a segurança de sua conta.</p>
+                              <br>Time AlphaPets</p>
                           </div>
                         </td>
                       </tr>

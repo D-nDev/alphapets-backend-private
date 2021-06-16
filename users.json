@@ -4,8 +4,9 @@
         "name": "Diego",
         "email": "diego-s.novaes@hotmail.com",
         "telnumber": 11970151606,
-        "pass": "$2b$10$hR2YB7Zh5MoJH5gSc91YfO.tQ1NPqbnSviIh9jMA9Kgla2FuiEhaa",
+        "pass": "$2b$10$4.s3bkfkZDcgkd3YaoblBufdA3DRnqiMVRdpyxhiX/avi6X3J1Ram",
         "passwordResetToken": "",
-        "passwordResetExpires_fulldate": ""
+        "passwordResetExpires_fulldate": "",
+        "userphoto": ""
     }
 ]

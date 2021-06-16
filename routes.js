@@ -23,6 +23,11 @@ const sendsms = require("./controllers/sendsms");
 const resetpass = require("./controllers/resetpass");
 const newpet = require("./controllers/registerPet");
 const schedule = require('./controllers/schedule');
+const userPhoto = require('./controllers/userphoto');
+const changePass = require('./controllers/changepass');
+const getPets = require('./controllers/getPets');
+const getSchedules = require('./controllers/getSchedules');
+const unSchedule = require('./controllers/unSchedule');
 
 // register a new user
 router.post("/register", (req, res) => {
@@ -56,7 +61,9 @@ router.post("/login", (req, res) => {
 
     login_user
         .then((result_response) => {
-            console.log("E-mail: " + result_response);
+            console.log("E-mail: " + result_response.email);
+            console.log("Nome: " + result_response.name);
+            console.log("Telefone: " + result_response.number);
             /*res.cookie("name", result_response, {
                 maxAge: 172800000,
                 signed: true,
@@ -73,11 +80,11 @@ router.post("/login", (req, res) => {
 });
 
 // this should be called on the person wanna log-off
-router.post("/logout", (req, res) => {
+/*router.post("/logout", (req, res) => {
     res.clearCookie("email");
     res.clearCookie("name");
     res.send("Ok");
-});
+});*/
 
 // if you wanna test if the login is working, you can test with a integrated front-end or postman/imsonia
 router.get("/test", (req, res) => {
@@ -124,10 +131,12 @@ router.post("/forgotpass", (req, res) => {
                     res.send(response);
                 })
                 .catch((error) => {
+                    res.send(error);
                     console.log(error);
                 });
         })
         .catch((error) => {
+            res.send(error);
             console.log(error);
         });
 });
@@ -150,11 +159,10 @@ router.post("/forgotpass2", (req, res) => {
 
 // reset the password with code sent to the sms/email
 router.post("/resetpass", (req, res) => {
-    const email = req.body.email;
     const token = req.body.token;
-    const newpass = req.body.newpass;
+    const newpass = req.body.newpass_user;
 
-    const token_exists = resetpass.resetPass(email, token, newpass);
+    const token_exists = resetpass.resetPass(token, newpass);
 
     token_exists
         .then((resolve) => {
@@ -172,7 +180,7 @@ router.post("/newpet", (req, res) => {
     const weight = req.body.weight;
     const breed = req.body.breed;
     const type = req.body.type;
-    const owner_id = req.body.owner_id;
+    const owner_email = req.body.owner_email;
     const photo = req.body.photo;
 
     const pet = newpet.registerPet(
@@ -182,7 +190,7 @@ router.post("/newpet", (req, res) => {
         weight,
         breed,
         type,
-        owner_id,
+        owner_email,
         photo
     );
 
@@ -195,18 +203,88 @@ router.post("/newpet", (req, res) => {
 
 router.post("/schedule", (req, res) => {
     const id = 1;
-    const name = req.body.name;
-    const description = req.body.description;
-    const owner_id = req.body.owner_id;
+    const description = req.body.description_schedule;
+    const owner_email = req.body.owner_email;
     const pet_id = req.body.pet_id;
     const pet_name = req.body.pet_name;
-    const date = req.body.date;
+    const date = req.body.date_schedule;
 
-    const newschedule = schedule.schedule(id, name, description, owner_id, pet_id, pet_name, date);
+    const newschedule = schedule.schedule(id, description, owner_email, pet_id, pet_name, date);
 
     newschedule.then((response) => {
+        console.log(response);
         res.send(response);
     }).catch((error) => {
+        console.log(error);
+        res.send(error);
+    })
+})
+
+router.post("/setphoto", (req, res) => {
+    const email = req.body.email;
+    const link = req.body.link;
+    const newphoto = userPhoto.userPhoto(email, link);
+
+    newphoto.then((response) => {
+        res.send(response);
+    }).catch((error) => {
+        res.send(error);
+    })
+})
+
+router.post("/changepass", (req, res) => {
+    const email = req.body.email;
+    const user_oldpass = req.body.user_oldpass;
+    const user_newpass = req.body.user_newpass;
+
+    const changeuserPass = changePass.changePass(email, user_oldpass, user_newpass)
+
+    changeuserPass.then((response) => {
+        console.log(response)
+        res.send(response);
+    }).catch((error) => {
+        console.log(error)
+        res.send(error);
+    })
+})
+
+router.get("/getpets", (req, res) => {
+    const email = req.query.email;
+    console.log(`EMAIL: ${email}`);
+    const userpets = getPets.getPets(email);
+
+    userpets.then((response) => {
+        res.send(response);
+    }).catch((error) => {
+        res.send(error);
+    })
+})
+
+router.get("/getschedules", (req, res) => {
+    const email = req.query.email;
+
+    const userschedules = getSchedules.getSchedules(email);
+
+    userschedules.then((response) => {
+        res.send(response);
+    }).catch((error) => {
+        console.log(error);
+        res.send(error);
+    })
+})
+
+router.post("/unschedule", (req, res) => {
+    const email = req.body.email;
+    const pid = req.body.pid;
+    console.log(email);
+    console.log(pid);
+
+    const deleteSchedule = unSchedule.removeSchedule(email, pid);
+
+    deleteSchedule.then((response) => {
+        res.send(response);
+    }).catch((error) => {
+        console.log(error);
         res.send(error);
     })
 })

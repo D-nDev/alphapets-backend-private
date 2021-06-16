@@ -27,7 +27,7 @@ function sendSms(usernumber, token) {
                     token +
                     "                                    " +
                     "Use your code at: " +
-                    "/resetpass"; // sms message
+                    "/recover"; // sms message
                 client.sms
                     .enviar(
                         usernumber,
@@ -50,7 +50,7 @@ function sendSms(usernumber, token) {
                             JSON.stringify(user),
                             (err) => {
                                 if (err) throw err;
-                                resolve(true); // send back to the app.js, in order to send something to the front-end or whatever else
+                                resolve('Ok'); // send back to the app.js, in order to send something to the front-end or whatever else
                             }
                         );
                     })

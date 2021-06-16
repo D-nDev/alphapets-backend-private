@@ -36,6 +36,7 @@ function registerUser(id, email, telnumber, name, password) {
                 temp_user["pass"] = bcrypt.hashSync(password, 10);
                 temp_user["passwordResetToken"] = "";
                 temp_user["passwordResetExpires_fulldate"] = "";
+                temp_user["userphoto"] = "";
 
                 user.push(temp_user);
 

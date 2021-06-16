@@ -1,6 +1,6 @@
 const fs = require("fs");
 
-function registerPet(id, name, age, weight, breed, type, owner_id, photo) {
+function registerPet(id, name, age, weight, breed, type, owner_email, photo) {
     return new Promise((resolve, reject) => {
         fs.readFile("pets.json", (err, data) => {
             if (err) throw err;
@@ -13,13 +13,13 @@ function registerPet(id, name, age, weight, breed, type, owner_id, photo) {
             let soma = 0;
 
             pets.forEach(pet => {
-                if(pet.name == name && pet.type == type && pet.owner_id == owner_id) {
+                if(pet.name == name && pet.type == type && pet.owner_email == owner_email) {
                     soma += 1;
                 }
             })
 
             if (soma >= 1) {
-                reject(false);
+                reject('0');
             } else {
                 const temp_pet = {};
 
@@ -29,14 +29,14 @@ function registerPet(id, name, age, weight, breed, type, owner_id, photo) {
                 temp_pet["weight"] = weight;
                 temp_pet["breed"] = breed;
                 temp_pet["type"] = type;
-                temp_pet["owner_id"] = owner_id;
+                temp_pet["owner_email"] = owner_email;
                 temp_pet["photo"] = photo;
 
                 pets.push(temp_pet);
 
                 fs.writeFile("pets.json", JSON.stringify(pets), (err) => {
                     if (err) throw err;
-                    resolve(true);
+                    resolve('1');
                 });
             }
         });
